@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# A test code for providing hard coded pose values to action server.
+
 import rospy
 import actionlib
 import math
