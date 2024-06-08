@@ -2,3 +2,7 @@
 	path = ar_track_alvar
 	url = https://github.com/ros-perception/ar_track_alvar.git
 	branch = noetic-devel
+[submodule "universal_robot"]
+	path = universal_robot
+	url = https://github.com/ros-industrial/universal_robot.git
+	branch = noetic-devel
