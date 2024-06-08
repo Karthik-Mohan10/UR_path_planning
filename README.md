@@ -10,6 +10,10 @@ The task includes;
 3. Addition of obstacles around the physical robot to the scene for collision checking
 4. Crete an action server node that accepts the ARTag poses as inputs and executes robot motion using Moveit framework
 
-An example of welding path
+<u>Example of a welding path</u>
 
 ![alt text](https://github.com/Karthik-Mohan10/UR_path_planning/blob/main/Welding%20path.JPG?raw=true)
+
+<u>ARTags</u>
+
+![alt text](https://github.com/Karthik-Mohan10/UR_path_planning/blob/main/ARTags.JPG?raw=true)
