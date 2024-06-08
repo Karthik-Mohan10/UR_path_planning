@@ -16,7 +16,7 @@
     <!-- Commenting out for now. Rviz opens in the latest launch file -->
     <!-- <node pkg="rviz" name="rviz" type="rviz" args="-d $(find camera)/rviz/camera.rviz" /> -->
 
-    
+    <!-- Statis transform between the camera and UR Robot base link-->
     <node pkg="tf" type="static_transform_publisher" name="name_for_static_transform" output="screen" args="-0.46 0.06 0.53 1.57 3.14 0  base_link usb_cam 30"/>
 
 </launch>
