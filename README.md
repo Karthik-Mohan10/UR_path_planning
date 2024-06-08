@@ -11,6 +11,5 @@ The task includes;
 4. Crete an action server node that accepts the ARTag poses as inputs and executes robot motion using Moveit framework
 
 An example of welding path
-<p align="center">
-  <img src="Welding path" width="350" title="hover text" alt="accessibility text" >
-</p>
+
+![alt text](https://github.com/Karthik-Mohan10/UR_path_planning/blob/main/Welding%20path.JPG?raw=true)
