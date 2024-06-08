@@ -1,20 +1,26 @@
 <launch>
 	<arg name="sim" default="true" doc="Launches fake controllers. Use false to start/ connect to real robot." />
-	
+	    
+		<!-- To launch camera node -->
         <include file="$(find camera)/launch/webcam_launch.launch" />
         
+		<!-- To launch ARTag node to capture the pose of marker  -->
         <include file="$(find ar_track_alvar)/launch/artag_track.launch" />
         
+		<!-- To launch UR, sim = false would activate the real robot -->
         <include file="$(find robot_launcher)/launch/launch_robot.launch" >
         	<arg name="sim" value="$(arg sim)" />
         </include>   
 
 	<node name="obstacle_node" pkg="robot_environment" type="configure_robot_env.py" output="screen" />
 	
+	<!-- Static transform between the TCP and nozzle coordinate system -->
 	<node pkg="tf" type="static_transform_publisher" name="tool_nozzle_static_transform" output="screen" args="0.016 0 0.098 0 0.540 0 tool0 nozzle_link 30"/>
 	
+	<!-- Static transform to change the orientation of vertical axis of marker to point into the plane-->
 	<node pkg="tf" type="static_transform_publisher" name="static_transform_tracker" output="screen" args="0 0 0 0 0 3.14  ar_marker_13 ar_marker_13a 30"/>
 	
+	<!-- Static transform to ensure that the nozzle point matches with ar_marker_13a and TCP point matches with tcp_goal & also the nozzle point is always perpendicular to the desired welding point-->
 	<node pkg="tf" type="static_transform_publisher" name="tcpgoal_marker_static_transform" output="screen" args="0.016 0 -0.098 0 -0.54 0 ar_marker_13a tcp_goal 30"/>
 	
 </launch>
