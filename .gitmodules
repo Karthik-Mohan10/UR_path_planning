@@ -6,3 +6,6 @@
 	path = universal_robot
 	url = https://github.com/ros-industrial/universal_robot.git
 	branch = noetic-devel
+[submodule "Universal_Robots_ROS_Driver"]
+	path = Universal_Robots_ROS_Driver
+	url = https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git
